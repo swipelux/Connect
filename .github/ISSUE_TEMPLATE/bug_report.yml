@@ -16,8 +16,8 @@ body:
 
   - type: input
     attributes:
-      label: RainbowKit Version
-      description: What version of RainbowKit are you using?
+      label: Connect Version
+      description: What version of Connect are you using?
       placeholder: 1.0.0
     validations:
       required: true
