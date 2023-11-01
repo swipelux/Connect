@@ -151,7 +151,7 @@ Once you’ve pushed the tag, you can create a new release on GitHub.
 - Go to [GitHub’s new release form.](https://github.com/rainbow-me/rainbowkit/releases/new)
 - Select the latest version tag for `@rainbow-me/rainbowkit`.
 - Set the title to `@rainbow-me/rainbowkit@x.x.x` (substituting the latest version)
-- Copy the Markdown content below the latest version heading from [RainbowKit’s `CHANGELOG.md`](../packages/rainbowkit/CHANGELOG.md)
+- Copy the Markdown content below the latest version heading from [RainbowKit’s `CHANGELOG.md`](../packages/swipelux-connect/CHANGELOG.md)
 
 #### If you published `rainbowkit-siwe-next-auth`:
 

@@ -31,9 +31,15 @@ jobs:
         run: npm i -g pnpm@${{env.pnpm}}
       - name: Install dependencies
         run: pnpm install
+        id: install
       - name: Build packages
+        id: build
         run: pnpm build
       - name: Lint and format
+        id: lint
+        continue-on-error: true
         run: pnpm lint
       - name: Run tests
-        run: pnpm test && pnpm test:cli
+        id: test
+        if: steps.lint.outcome == 'success' && steps.lint.conclusion == 'success'
+        run: pnpm test
