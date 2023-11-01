@@ -1,4 +1,4 @@
-# @rainbow-me/rainbowkit
+# @swipelux/connect
 
 ## 1.1.3
 
