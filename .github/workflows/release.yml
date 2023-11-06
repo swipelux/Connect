@@ -42,9 +42,11 @@ jobs:
         run: npm i -g pnpm@${{env.pnpm}}
 
       - name: Install dependencies
+        id: install
         run: pnpm install
 
       - name: Create Release Pull Request
+        id: release
         uses: changesets/action@v1
         with:
           title: 'chore: version packages'
