@@ -1,6 +1,6 @@
 import '../styles/globals.css';
-import '@rainbow-me/rainbowkit/styles.css';
-import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import '@swipelux/connect/styles.css';
+import { getDefaultWallets, RainbowKitProvider } from '@swipelux/connect';
 import type { AppProps } from 'next/app';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import {
