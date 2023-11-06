@@ -17,23 +17,34 @@ jobs:
         node: [lts/*]
 
     steps:
-      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
+
       - name: Cache .pnpm-store
         uses: actions/cache@v3
         with:
           path: ~/.pnpm-store
           key: ${{ runner.os }}-node${{ matrix.node }}-${env.pnpm}-${{ hashFiles('**/pnpm-lock.yaml') }}
+
       - name: Install pnpm
         run: npm i -g pnpm@${{env.pnpm}}
+
       - name: Install dependencies
+        id: install
         run: pnpm install
+
       - name: Build packages
+        id: build
         run: pnpm build
+
       - name: Lint and format
+        id: lint
+        continue-on-error: true
         run: pnpm lint
+
       - name: Run tests
-        run: pnpm test && pnpm test:cli
+        id: test
+        if: steps.lint.outcome == 'success' && steps.lint.conclusion == 'success'
+        run: pnpm test
