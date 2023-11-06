@@ -1,0 +1,48 @@
+name: Publish to NPM
+on:
+  release:
+    types: [created]
+jobs:
+  publish:
+    name: Publish
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [lts/*]
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Cache .pnpm-store
+        uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-node${{ matrix.node }}-${env.pnpm}-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Install pnpm
+        run: npm i -g pnpm@${{env.pnpm}}
+
+      - name: Install dependencies
+        id: install
+        run: pnpm install
+
+      - name: Build packages 🔧
+        id: build
+        run: pnpm build
+
+      - name: Publish package on NPM 📦
+        run: pnpm publish --filter ./packages/swipelux-connect
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
