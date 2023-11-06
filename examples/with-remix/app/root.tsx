@@ -30,10 +30,10 @@ import {
   RainbowKitProvider,
   ConnectButton,
   getDefaultWallets,
-} from '@rainbow-me/rainbowkit';
+} from '@swipelux/connect';
 
 import globalStylesUrl from './styles/global.css';
-import rainbowStylesUrl from '@rainbow-me/rainbowkit/styles.css';
+import rainbowStylesUrl from '@swipelux/connect/styles.css';
 
 type Env = { PUBLIC_ENABLE_TESTNETS?: string };
 
@@ -41,7 +41,7 @@ type LoaderData = { ENV: Env };
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
-  title: 'RainbowKit Remix Example',
+  title: 'Connect Remix Example',
   viewport: 'width=device-width,initial-scale=1',
 });
 
@@ -78,7 +78,7 @@ export default function App() {
     );
 
     const { connectors } = getDefaultWallets({
-      appName: 'RainbowKit Remix Example',
+      appName: 'Connect Remix Example',
       projectId: 'YOUR_PROJECT_ID',
       chains,
     });

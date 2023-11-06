@@ -1,17 +1,17 @@
 import '../styles/global.css';
-import '@rainbow-me/rainbowkit/styles.css';
+import '@swipelux/connect/styles.css';
 import type { AppProps } from 'next/app';
 import {
   RainbowKitProvider,
   getDefaultWallets,
   connectorsForWallets,
   Locale,
-} from '@rainbow-me/rainbowkit';
+} from '@swipelux/connect';
 import {
   argentWallet,
   trustWallet,
   ledgerWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@swipelux/connect/wallets';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import {
   mainnet,
@@ -41,13 +41,13 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 const projectId = 'YOUR_PROJECT_ID';
 
 const { wallets } = getDefaultWallets({
-  appName: 'RainbowKit demo',
+  appName: 'Connect demo',
   projectId,
   chains,
 });
 
 const demoAppInfo = {
-  appName: 'Rainbowkit Demo',
+  appName: 'Connect Demo',
 };
 
 const connectors = connectorsForWallets([
