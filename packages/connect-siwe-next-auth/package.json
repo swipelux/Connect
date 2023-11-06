@@ -1,7 +1,7 @@
 {
-  "name": "@rainbow-me/rainbowkit-siwe-next-auth",
-  "version": "0.3.1",
-  "description": "RainbowKit authentication adapter for Sign-In with Ethereum and NextAuth.js",
+  "name": "@swipelux/connect-siwe-next-auth",
+  "version": "0.1.0",
+  "description": "Connect authentication adapter for Sign-In with Ethereum and NextAuth.js",
   "files": [
     "dist"
   ],
@@ -35,13 +35,13 @@
     "siwe": "^2.1.4"
   },
   "devDependencies": {
-    "@rainbow-me/rainbowkit": "workspace:*",
+    "@swipelux/connect": "workspace:*",
     "siwe": "^2.1.4",
     "ethers": "^5.6.8"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rainbow-me/rainbowkit.git",
-    "directory": "packages/rainbowkit-siwe-next-auth"
+    "url": "git+https://github.com/swipelux/Connect.git",
+    "directory": "packages/connect-siwe-next-auth"
   }
 }
