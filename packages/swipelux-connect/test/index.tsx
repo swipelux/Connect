@@ -43,7 +43,7 @@ export function renderWithProviders(
   ]);
 
   const { connectors } = getDefaultWallets({
-    appName: 'My RainbowKit App',
+    appName: 'My Connect App',
     chains,
     projectId: process.env.WALLETCONNECT_PROJECT_ID ?? 'YOUR_PROJECT_ID',
   });
