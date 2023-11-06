@@ -106,7 +106,7 @@ const projectId =
   process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID ?? 'YOUR_PROJECT_ID';
 
 const { wallets } = getDefaultWallets({
-  appName: 'RainbowKit demo',
+  appName: 'Connect demo',
   chains,
   projectId,
 });
@@ -161,7 +161,7 @@ const wagmiConfig = createConfig({
 });
 
 const demoAppInfo = {
-  appName: 'Rainbowkit Demo',
+  appName: 'Connect Demo',
 };
 
 const DisclaimerDemo: DisclaimerComponent = ({ Link, Text }) => {
@@ -193,7 +193,7 @@ const CustomAvatar: AvatarComponent = ({ size }) => {
 };
 
 const getSiweMessageOptions: GetSiweMessageOptions = () => ({
-  statement: 'Sign in to the RainbowKit Demo',
+  statement: 'Sign in to the Connect Demo',
 });
 
 const themes = [
@@ -649,7 +649,7 @@ export default function App(
   return (
     <>
       <Head>
-        <title>RainbowKit Example</title>
+        <title>Connect Example</title>
         <link href="/favicon.ico" rel="icon" />
       </Head>
       <SessionProvider refetchInterval={0} session={appProps.pageProps.session}>
