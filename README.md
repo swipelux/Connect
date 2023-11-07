@@ -1,12 +1,13 @@
-<a href="https://rainbowkit.com">
-  <img alt="rainbowkit" src="https://user-images.githubusercontent.com/372831/168174718-685980e0-391e-4621-94a1-29bf83979fa5.png" />
-</a>
+# Connect
 
-# RainbowKit
+https://github.com/swipelux/Connect/actions/workflows/ci.yml/badge.svg
+https://github.com/swipelux/Connect/actions/workflows/codeql-analysis.yml/badge.svg
+https://github.com/swipelux/Connect/actions/workflows/release.yml/badge.svg
+https://github.com/swipelux/Connect/actions/workflows/publish.yml/badge.svg
 
 **The best way to connect a wallet 🌈**
 
-RainbowKit is a [React](https://reactjs.org/) library that makes it easy to add wallet connection to your dapp.
+Connect is a fork of the RainbowKit project. Connect is a [React](https://reactjs.org/) library that makes it easy to add wallet connection to your dapp.
 
 - 🔥 Out-of-the-box wallet management
 - ✅ Easily customizable
@@ -17,26 +18,26 @@ RainbowKit is a [React](https://reactjs.org/) library that makes it easy to add 
 You can scaffold a new RainbowKit + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org) app with one of the following commands, using your package manager of choice:
 
 ```bash
-npm init @rainbow-me/rainbowkit@latest
+npm init @swipelux/connect@latest
 # or
-pnpm create @rainbow-me/rainbowkit@latest
+pnpm create @swipelux/connect@latest
 # or
-yarn create @rainbow-me/rainbowkit
+yarn create @swipelux/connect
 ```
 
 ## Documentation
 
-For full documentation, visit [rainbowkit.com](https://rainbowkit.com).
+Connect is a fork of the RainbowKit project. For full documentation, visit [rainbowkit.com](https://rainbowkit.com).
 
 ### Try it out
 
-You can use the CodeSandbox links below try out RainbowKit:
+You can use the CodeSandbox links below try out Connect:
 
-- with [Create React App](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-create-react-app)
-- with [Next.js](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next)
-- with [Next.js App Router](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next-app)
-- with [Remix](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-remix)
-- with [Vite](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-vite)
+- with [Create React App](https://codesandbox.io/p/sandbox/github/swipelux/Connect/tree/main/examples/with-create-react-app)
+- with [Next.js](https://codesandbox.io/p/sandbox/github/swipelux/Connect/tree/main/examples/with-next)
+- with [Next.js App Router](https://codesandbox.io/p/sandbox/github/swipelux/Connect/tree/main/examples/with-next-app)
+- with [Remix](https://codesandbox.io/p/sandbox/github/swipelux/Connect/tree/main/examples/with-remix)
+- with [Vite](https://codesandbox.io/p/sandbox/github/swipelux/Connect/tree/main/examples/with-vite)
 
 ## Examples
 
