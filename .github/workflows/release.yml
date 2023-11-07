@@ -43,7 +43,7 @@ jobs:
           ${{ runner.os }}-
 
       - name: Install pnpm
-        run: npm i -g pnpm@${{env.pnpm}}
+        run: npm i -g pnpm@${{ env.pnpm }}
 
       - name: Install dependencies
         id: install
