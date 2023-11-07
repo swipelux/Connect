@@ -47,5 +47,5 @@ jobs:
 
       - name: Run tests
         id: test
-        if: steps.lint.outcome == 'success' && steps.lint.conclusion == 'success'
+#        if: steps.lint.outcome == 'success' && steps.lint.conclusion == 'success'
         run: pnpm test
