@@ -1,4 +1,4 @@
-# RainbowKit Contribution Guide
+# Connect Contribution Guide
 
 Thanks for your interest in contributing to Connect! Please take a moment to review this document **before submitting a pull request.**
 
@@ -27,7 +27,7 @@ This will run an example app on [localhost:3000](http://localhost:3000) and the 
 
 The example app code is located in [`packages/example`](../packages/example). The documentation site code is located in [`site`](../site). Make sure you clean up after yourself before pushing up any changes.
 
-All API changes should also include updates to [`README.md`](../README.md) and the documentation site. Documentation is crucial to helping developers of all experience levels use RainbowKit.
+All API changes should also include updates to [`README.md`](../README.md) and the documentation site. Documentation is crucial to helping developers of all experience levels use Connect.
 
 ## Coding standards
 
@@ -89,7 +89,7 @@ pnpm test:cli:dev
 
 ### Linking CLI globally
 
-You can also link the create-connect command globally. This allows you to try out create-connect elsewhere on your machine. Note that it will install the latest version of RainbowKit from npm so it's possible the template will be using APIs that haven't been released yet. This is most useful for seeing what the CLI looks like for a typical consumer.
+You can also link the create-connect command globally. This allows you to try out create-connect elsewhere on your machine. Note that it will install the latest version of Connect from npm, so it's possible the template will be using APIs that haven't been released yet. This is most useful for seeing what the CLI looks like for a typical consumer.
 
 ```bash
 pnpm link:cli
