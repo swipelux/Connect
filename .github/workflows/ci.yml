@@ -28,10 +28,10 @@ jobs:
         with:
           path: ~/.pnpm-store
           key: ${{ runner.os }}-build-${ env.pnpm }-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-build-${{ env.pnpm }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.pnpm }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
       - name: Install pnpm
         run: npm i -g pnpm@${{ env.pnpm }}
