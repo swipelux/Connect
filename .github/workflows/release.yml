@@ -36,7 +36,11 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.pnpm-store
-          key: ${{ runner.os }}-node${{ matrix.node }}-${env.pnpm}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-build-${ env.pnpm }-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.pnpm }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
 
       - name: Install pnpm
         run: npm i -g pnpm@${{env.pnpm}}
