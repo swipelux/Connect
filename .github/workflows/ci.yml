@@ -42,7 +42,7 @@ jobs:
 
       - name: Build packages
         id: build
-        run: pnpm --filter "@swipelux/connect" build
+        run: pnpm build
 
       - name: Lint and format
         id: lint
