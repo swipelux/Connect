@@ -52,9 +52,9 @@ export default function App({
     <WagmiConfig {...etc}>
       <SessionProvider refetchInterval={0} session={pageProps.session}>
         <RainbowKitSiweNextAuthProvider>
-          <RainbowKitProvider {...etc}>
+          <SwipeluxConnectProvider {...etc}>
             <Component {...pageProps} />
-          </RainbowKitProvider>
+          </SwipeluxConnectProvider>
         </RainbowKitSiweNextAuthProvider>
       </SessionProvider>
     </WagmiConfig>

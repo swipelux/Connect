@@ -52,7 +52,7 @@ export type Theme =
       darkMode: ThemeVars;
     };
 
-export interface RainbowKitProviderProps {
+export interface SwipeluxConnectProviderProps {
   chains: RainbowKitChain[];
   widgetSettings?: unknown;
   initialChain?: RainbowKitChain | number;
@@ -79,7 +79,7 @@ export function useTheme() {
   return useContext(ThemeContext);
 }
 
-export function RainbowKitProvider({
+export function SwipeluxConnectProvider({
   appInfo,
   avatar,
   chains,
@@ -92,7 +92,7 @@ export function RainbowKitProvider({
   showRecentTransactions = false,
   theme = defaultTheme,
   widgetSettings,
-}: RainbowKitProviderProps) {
+}: SwipeluxConnectProviderProps) {
   usePreloadImages();
   useFingerprint();
 

@@ -4,7 +4,7 @@ https://github.com/swipelux/Connect/actions/workflows/ci.yml/badge.svg
 https://github.com/swipelux/Connect/actions/workflows/codeql-analysis.yml/badge.svg
 https://github.com/swipelux/Connect/actions/workflows/release.yml/badge.svg
 
-**The best way to connect a wallet 🌈**
+**The best way to connect a wallet **
 
 Connect is a fork of the RainbowKit project. Connect is a [React](https://reactjs.org/) library that makes it easy to add wallet connection to your dapp.
 
@@ -12,31 +12,14 @@ Connect is a fork of the RainbowKit project. Connect is a [React](https://reactj
 - ✅ Easily customizable
 - 🦄 Built on top of [wagmi](https://wagmi.sh) and [viem](https://viem.sh)
 
-## Quick start
-
-You can scaffold a new RainbowKit + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org) app with one of the following commands, using your package manager of choice:
-
-```bash
-npm init @swipelux/connect@latest
-# or
-pnpm create @swipelux/connect@latest
-# or
-yarn create @swipelux/connect
-```
-
 ## Documentation
 
 Connect is a fork of the RainbowKit project. For full documentation, visit [rainbowkit.com](https://rainbowkit.com).
 
-### Try it out
+You should use `RainbowKitProvider` as `SwipeluxConnectProvider` and `RainbowKitAuthenticationProvider` as `SwipeluxConnectAuthenticationProvider`.
 
-You can use the CodeSandbox links below try out Connect:
+Also you should pass [swipelux widget settings](https://docs.swipelux.com/IntegrationGuides/CustomizationOptions) into SwipeluxConnectProvider.
 
-- with [Create React App](https://codesandbox.io/p/sandbox/github/swipelux/Connect/tree/main/examples/with-create-react-app)
-- with [Next.js](https://codesandbox.io/p/sandbox/github/swipelux/Connect/tree/main/examples/with-next)
-- with [Next.js App Router](https://codesandbox.io/p/sandbox/github/swipelux/Connect/tree/main/examples/with-next-app)
-- with [Remix](https://codesandbox.io/p/sandbox/github/swipelux/Connect/tree/main/examples/with-remix)
-- with [Vite](https://codesandbox.io/p/sandbox/github/swipelux/Connect/tree/main/examples/with-vite)
 
 ## Examples
 

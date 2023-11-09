@@ -1,5 +1,5 @@
 import {
-  RainbowKitAuthenticationProvider,
+  SwipeluxConnectAuthenticationProvider,
   createAuthenticationAdapter,
 } from '@swipelux/connect';
 import { getCsrfToken, signIn, signOut, useSession } from 'next-auth/react';
@@ -86,12 +86,12 @@ export function RainbowKitSiweNextAuthProvider({
   );
 
   return (
-    <RainbowKitAuthenticationProvider
+    <SwipeluxConnectAuthenticationProvider
       adapter={adapter}
       enabled={enabled}
       status={status}
     >
       {children}
-    </RainbowKitAuthenticationProvider>
+    </SwipeluxConnectAuthenticationProvider>
   );
 }

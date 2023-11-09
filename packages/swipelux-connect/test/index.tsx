@@ -9,8 +9,8 @@ import { arbitrum, base, mainnet, optimism, polygon, zora } from 'wagmi/chains';
 import { MockConnector } from 'wagmi/connectors/mock';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
-import { RainbowKitProvider } from '../src/components/RainbowKitProvider/RainbowKitProvider';
-import type { RainbowKitProviderProps } from '../src/components/RainbowKitProvider/RainbowKitProvider';
+import { SwipeluxConnectProvider } from '../src/components/RainbowKitProvider/RainbowKitProvider';
+import type { SwipeluxConnectProviderProps } from '../src/components/RainbowKitProvider/RainbowKitProvider';
 import { getDefaultWallets } from '../src/wallets/getDefaultWallets';
 
 const defaultChains = [mainnet, polygon, optimism, arbitrum, base, zora];
@@ -21,7 +21,7 @@ export function renderWithProviders(
     chains?: Chain[];
     mock?: boolean;
     mockOptions?: MockProviderOptions;
-    props?: Omit<RainbowKitProviderProps, 'children'>;
+    props?: Omit<SwipeluxConnectProviderProps, 'children'>;
   },
 ) {
   const supportedChains: Chain[] = options?.chains || defaultChains;
@@ -67,7 +67,7 @@ export function renderWithProviders(
   return render(component, {
     wrapper: ({ children }) => (
       <WagmiConfig config={wagmiConfig}>
-        <RainbowKitProvider
+        <SwipeluxConnectProvider
           chains={chains}
           children={children}
           {...options?.props}

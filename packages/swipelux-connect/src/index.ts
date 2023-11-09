@@ -9,7 +9,7 @@ export {
 } from './components/RainbowKitProvider/ModalContext';
 export { useAddRecentTransaction } from './transactions/useAddRecentTransaction';
 export {
-  RainbowKitAuthenticationProvider,
+  SwipeluxConnectAuthenticationProvider,
   createAuthenticationAdapter,
 } from './components/RainbowKitProvider/AuthenticationContext';
 export type { Wallet, WalletList } from './wallets/Wallet';

@@ -1,2 +1,2 @@
 export { ConnectButton } from './ConnectButton/ConnectButton';
-export { RainbowKitProvider } from './RainbowKitProvider/RainbowKitProvider';
+export { SwipeluxConnectProvider } from './RainbowKitProvider/RainbowKitProvider';

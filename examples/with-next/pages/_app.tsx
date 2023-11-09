@@ -2,7 +2,7 @@ import '../styles/global.css';
 import '@swipelux/connect/styles.css';
 import type { AppProps } from 'next/app';
 import {
-  RainbowKitProvider,
+  SwipeluxConnectProvider,
   getDefaultWallets,
   connectorsForWallets,
   Locale,
@@ -73,9 +73,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   const { locale } = useRouter() as { locale: Locale };
   return (
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider appInfo={demoAppInfo} chains={chains} locale={locale}>
+      <SwipeluxConnectProvider appInfo={demoAppInfo} chains={chains} locale={locale}>
         <Component {...pageProps} />
-      </RainbowKitProvider>
+      </SwipeluxConnectProvider>
     </WagmiConfig>
   );
 }

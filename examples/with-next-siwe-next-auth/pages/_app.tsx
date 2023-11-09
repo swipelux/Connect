@@ -2,7 +2,7 @@ import '../styles/global.css';
 import '@swipelux/connect/styles.css';
 import type { AppProps } from 'next/app';
 import {
-  RainbowKitProvider,
+  SwipeluxConnectProvider,
   getDefaultWallets,
   connectorsForWallets,
 } from '@swipelux/connect';
@@ -89,9 +89,9 @@ export default function App({
         <RainbowKitSiweNextAuthProvider
           getSiweMessageOptions={getSiweMessageOptions}
         >
-          <RainbowKitProvider appInfo={demoAppInfo} chains={chains}>
+          <SwipeluxConnectProvider appInfo={demoAppInfo} chains={chains}>
             <Component {...pageProps} />
-          </RainbowKitProvider>
+          </SwipeluxConnectProvider>
         </RainbowKitSiweNextAuthProvider>
       </WagmiConfig>
     </SessionProvider>

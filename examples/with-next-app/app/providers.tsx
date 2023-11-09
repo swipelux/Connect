@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import {
-  RainbowKitProvider,
+  SwipeluxConnectProvider,
   getDefaultWallets,
   connectorsForWallets,
 } from '@swipelux/connect';
@@ -72,9 +72,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
   React.useEffect(() => setMounted(true), []);
   return (
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains} appInfo={demoAppInfo}>
+      <SwipeluxConnectProvider chains={chains} appInfo={demoAppInfo}>
         {mounted && children}
-      </RainbowKitProvider>
+      </SwipeluxConnectProvider>
     </WagmiConfig>
   );
 }
