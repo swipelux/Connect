@@ -1,12 +1,12 @@
 {
   "name": "example",
-  "version": "0.0.78",
+  "version": "0.1.0",
   "description": "",
   "private": true,
   "main": "index.js",
   "dependencies": {
-    "@rainbow-me/rainbowkit": "workspace:*",
-    "@rainbow-me/rainbowkit-siwe-next-auth": "workspace:*",
+    "@swipelux/connect": "workspace:*",
+    "@swipelux/connect-siwe-next-auth": "workspace:*",
     "ethers": "^5.6.8",
     "next": "^13.4.19",
     "next-auth": "4.22.3",

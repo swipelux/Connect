@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
-import '@rainbow-me/rainbowkit/styles.css';
-import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import '@swipelux/connect/styles.css';
+import { getDefaultWallets, RainbowKitProvider } from '@swipelux/connect';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import {
   mainnet,
@@ -33,7 +33,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'RainbowKit demo',
+  appName: 'Connect demo',
   projectId: 'YOUR_PROJECT_ID',
   chains,
 });

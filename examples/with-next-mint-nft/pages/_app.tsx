@@ -1,12 +1,12 @@
 import '../styles/global.css';
-import '@rainbow-me/rainbowkit/styles.css';
+import '@swipelux/connect/styles.css';
 import type { AppProps } from 'next/app';
 import {
   RainbowKitProvider,
   getDefaultWallets,
   connectorsForWallets,
-} from '@rainbow-me/rainbowkit';
-import { argentWallet, trustWallet } from '@rainbow-me/rainbowkit/wallets';
+} from '@swipelux/connect';
+import { argentWallet, trustWallet } from '@swipelux/connect/wallets';
 import { createConfig, configureChains, WagmiConfig } from 'wagmi';
 import { Chain } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
@@ -46,13 +46,13 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 const projectId = 'YOUR_PROJECT_ID';
 
 const { wallets } = getDefaultWallets({
-  appName: 'RainbowKit Mint NFT Demo',
+  appName: 'Connect Mint NFT Demo',
   projectId,
   chains,
 });
 
 const demoAppInfo = {
-  appName: 'RainbowKit Mint NFT Demo',
+  appName: 'Connect Mint NFT Demo',
 };
 
 const connectors = connectorsForWallets([

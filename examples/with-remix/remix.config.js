@@ -8,8 +8,8 @@ module.exports = {
   // serverBuildPath: "build/index.js",
   // publicPath: "/build/",
   serverDependenciesToBundle: [
-    '@rainbow-me/rainbowkit',
-    '@rainbow-me/rainbowkit/wallets',
+    '@swipelux/connect',
+    '@swipelux/connect/wallets',
     /^@?wagmi.*/,
     /.*/,
   ],

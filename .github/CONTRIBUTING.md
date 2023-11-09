@@ -1,14 +1,14 @@
-# RainbowKit Contribution Guide
+# Connect Contribution Guide
 
-Thanks for your interest in contributing to RainbowKit! Please take a moment to review this document **before submitting a pull request.**
+Thanks for your interest in contributing to Connect! Please take a moment to review this document **before submitting a pull request.**
 
-If you want to contribute but aren't sure where to start, you can create a [new discussion](https://github.com/rainbow-me/rainbowkit/discussions).
+If you want to contribute but aren't sure where to start, you can create a [new discussion](https://github.com/swipelux/Connect/discussions).
 
 ## Pull requests
 
 **Please ask first before starting work on any significant new features. This includes things like adding new wallets, chains, components, etc.**
 
-It's never a fun experience to have your pull request declined after investing a lot of time and effort into a new feature. To avoid this from happening, we request that contributors create [a feature request](https://github.com/rainbow-me/rainbowkit/discussions/new?category=ideas) to first discuss any API changes or significant new ideas.
+It's never a fun experience to have your pull request declined after investing a lot of time and effort into a new feature. To avoid this from happening, we request that contributors create [a feature request](https://github.com/swipelux/Connect/discussions/new?category=ideas) to first discuss any API changes or significant new ideas.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ This will run an example app on [localhost:3000](http://localhost:3000) and the 
 
 The example app code is located in [`packages/example`](../packages/example). The documentation site code is located in [`site`](../site). Make sure you clean up after yourself before pushing up any changes.
 
-All API changes should also include updates to [`README.md`](../README.md) and the documentation site. Documentation is crucial to helping developers of all experience levels use RainbowKit.
+All API changes should also include updates to [`README.md`](../README.md) and the documentation site. Documentation is crucial to helping developers of all experience levels use Connect.
 
 ## Coding standards
 
@@ -45,7 +45,7 @@ pnpm lint:fix
 
 ## Running tests
 
-RainbowKit has a suite of unit tests that can be run with the following command:
+Connect has a suite of unit tests that can be run with the following command:
 
 ```bash
 pnpm test
@@ -57,7 +57,7 @@ If snapshot tests fail, you can run the following command to update the snapshot
 pnpm test:update
 ```
 
-## Working on create-rainbowkit
+## Working on create-connect
 
 ### Template
 
@@ -89,7 +89,7 @@ pnpm test:cli:dev
 
 ### Linking CLI globally
 
-You can also link the create-rainbowkit command globally. This allows you to try out create-rainbowkit elsewhere on your machine. Note that it will install the latest version of RainbowKit from npm so it's possible the template will be using APIs that haven't been released yet. This is most useful for seeing what the CLI looks like for a typical consumer.
+You can also link the create-connect command globally. This allows you to try out create-connect elsewhere on your machine. Note that it will install the latest version of Connect from npm, so it's possible the template will be using APIs that haven't been released yet. This is most useful for seeing what the CLI looks like for a typical consumer.
 
 ```bash
 pnpm link:cli
@@ -97,7 +97,7 @@ pnpm link:cli
 
 ## Release notes
 
-RainbowKit uses [Changesets](https://github.com/changesets/changesets) to manage versioning and publishing.
+Connect uses [Changesets](https://github.com/changesets/changesets) to manage versioning and publishing.
 
 Each PR with a user-facing change (API change, bug fix, notable UI update, etc.) should include a “changeset”, which is a markdown file in the `.changeset` directory. This directory acts as a release queue and is automatically cleared out after each release.
 
@@ -146,27 +146,27 @@ git push --tags
 
 Once you’ve pushed the tag, you can create a new release on GitHub.
 
-#### If you published `rainbowkit`:
+#### If you published `connect`:
 
-- Go to [GitHub’s new release form.](https://github.com/rainbow-me/rainbowkit/releases/new)
-- Select the latest version tag for `@rainbow-me/rainbowkit`.
-- Set the title to `@rainbow-me/rainbowkit@x.x.x` (substituting the latest version)
-- Copy the Markdown content below the latest version heading from [RainbowKit’s `CHANGELOG.md`](../packages/rainbowkit/CHANGELOG.md)
+- Go to [GitHub’s new release form.](https://github.com/swipelux/Connect/releases/new)
+- Select the latest version tag for `@swipelux/connect`.
+- Set the title to `@swipelux/connect@x.x.x` (substituting the latest version)
+- Copy the Markdown content below the latest version heading from [Connect’s `CHANGELOG.md`](../packages/swipelux-connect/CHANGELOG.md)
 
-#### If you published `rainbowkit-siwe-next-auth`:
+#### If you published `connect-siwe-next-auth`:
 
-- Go to [GitHub’s new release form.](https://github.com/rainbow-me/rainbowkit/releases/new)
-- Select the latest version tag for `@rainbow-me/rainbowkit-siwe-next-auth`.
-- Set the title to `@rainbow-me/rainbowkit-siwe-next-auth@x.x.x` (substituting the latest version)
-- Copy the Markdown content below the latest version heading from [rainbowkit-siwe-next-auth’s `CHANGELOG.md`](../packages/rainbowkit-siwe-next-auth/CHANGELOG.md)
+- Go to [GitHub’s new release form.](https://github.com/swipelux/Connect/releases/new)
+- Select the latest version tag for `@swipelux/connect-siwe-next-auth`.
+- Set the title to `@swipelux/connect-siwe-next-auth@x.x.x` (substituting the latest version)
+- Copy the Markdown content below the latest version heading from [connect-siwe-next-auth’s `CHANGELOG.md`](../packages/connect-siwe-next-auth/CHANGELOG.md)
 
-#### If you published `create-rainbowkit`:
+#### If you published `create-connect`:
 
-- Go to [GitHub’s new release form.](https://github.com/rainbow-me/rainbowkit/releases/new)
-- Select the latest version tag for `@rainbow-me/create-rainbowkit`.
-- Set the title to `@rainbow-me/create-rainbowkit@x.x.x` (substituting the latest version)
-- Copy the Markdown content below the latest version heading from [create-rainbowkit’s `CHANGELOG.md`](../packages/create-rainbowkit/CHANGELOG.md)
+- Go to [GitHub’s new release form.](https://github.com/swipelux/Connect/releases/new)
+- Select the latest version tag for `@swipelux/create-connect`.
+- Set the title to `@swipelux/create-connect@x.x.x` (substituting the latest version)
+- Copy the Markdown content below the latest version heading from [create-connect’s `CHANGELOG.md`](../packages/create-connect/CHANGELOG.md)
 
-If at any stage you’re unsure of the formatting, you can [reference past RainbowKit releases.](https://github.com/rainbow-me/rainbowkit/releases)
+If at any stage you’re unsure of the formatting, you can [reference past Connect releases.](https://github.com/swipelux/Connect/releases)
 
 That’s it — you’re all done! 🎉

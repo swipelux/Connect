@@ -1,4 +1,4 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from '@swipelux/connect';
 
 const App = () => {
   return (

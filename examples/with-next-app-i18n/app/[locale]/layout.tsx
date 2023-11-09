@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
-import type { Locale } from '@rainbow-me/rainbowkit';
+import type { Locale } from '@swipelux/connect';
 import { Providers } from './providers';
  
 export function generateStaticParams() {
