@@ -1,8 +1,8 @@
 # Connect
 
-https://github.com/swipelux/Connect/actions/workflows/ci.yml/badge.svg
-https://github.com/swipelux/Connect/actions/workflows/codeql-analysis.yml/badge.svg
-https://github.com/swipelux/Connect/actions/workflows/release.yml/badge.svg
+![](https://github.com/swipelux/Connect/actions/workflows/ci.yml/badge.svg)
+![](https://github.com/swipelux/Connect/actions/workflows/codeql-analysis.yml/badge.svg)
+![](https://github.com/swipelux/Connect/actions/workflows/release.yml/badge.svg)
 
 **The best way to connect a wallet 🌈**
 
