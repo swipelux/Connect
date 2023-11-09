@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 
 import '@swipelux/connect/styles.css';
-import { getDefaultWallets, RainbowKitProvider } from '@swipelux/connect';
+import { getDefaultWallets, SwipeluxConnectProvider } from '@swipelux/connect';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import {
   mainnet,
@@ -52,9 +52,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains}>
+      <SwipeluxConnectProvider chains={chains}>
         <App />
-      </RainbowKitProvider>
+      </SwipeluxConnectProvider>
     </WagmiConfig>
   </React.StrictMode>
 );

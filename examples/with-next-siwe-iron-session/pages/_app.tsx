@@ -4,11 +4,11 @@ import '../styles/global.css';
 import '@swipelux/connect/styles.css';
 import type { AppProps } from 'next/app';
 import {
-  RainbowKitProvider,
+  SwipeluxConnectProvider,
   getDefaultWallets,
   connectorsForWallets,
   createAuthenticationAdapter,
-  RainbowKitAuthenticationProvider,
+  SwipeluxConnectAuthenticationProvider,
   AuthenticationStatus,
 } from '@swipelux/connect';
 import {
@@ -163,14 +163,14 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitAuthenticationProvider
+      <SwipeluxConnectAuthenticationProvider
         adapter={authAdapter}
         status={authStatus}
       >
-        <RainbowKitProvider appInfo={demoAppInfo} chains={chains}>
+        <SwipeluxConnectProvider appInfo={demoAppInfo} chains={chains}>
           <Component {...pageProps} />
-        </RainbowKitProvider>
-      </RainbowKitAuthenticationProvider>
+        </SwipeluxConnectProvider>
+      </SwipeluxConnectAuthenticationProvider>
     </WagmiConfig>
   );
 }

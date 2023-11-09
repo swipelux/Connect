@@ -5,7 +5,7 @@ import {
   AvatarComponent,
   DisclaimerComponent,
   Locale,
-  RainbowKitProvider,
+  SwipeluxConnectProvider,
   connectorsForWallets,
   darkTheme,
   getDefaultWallets,
@@ -285,7 +285,7 @@ function RainbowKitApp({
       enabled={authEnabled}
       getSiweMessageOptions={getSiweMessageOptions}
     >
-      <RainbowKitProvider
+      <SwipeluxConnectProvider
         appInfo={{
           ...demoAppInfo,
           ...(showDisclaimer && { disclaimer: DisclaimerDemo }),
@@ -636,7 +636,7 @@ function RainbowKitApp({
             </>
           )}
         </div>
-      </RainbowKitProvider>
+      </SwipeluxConnectProvider>
     </RainbowKitSiweNextAuthProvider>
   );
 }

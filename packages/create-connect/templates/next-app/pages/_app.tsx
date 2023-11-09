@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import '@swipelux/connect/styles.css';
-import { getDefaultWallets, RainbowKitProvider } from '@swipelux/connect';
+import { getDefaultWallets, SwipeluxConnectProvider } from '@swipelux/connect';
 import type { AppProps } from 'next/app';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import {
@@ -43,9 +43,9 @@ const wagmiConfig = createConfig({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains}>
+      <SwipeluxConnectProvider chains={chains}>
         <Component {...pageProps} />
-      </RainbowKitProvider>
+      </SwipeluxConnectProvider>
     </WagmiConfig>
   );
 }

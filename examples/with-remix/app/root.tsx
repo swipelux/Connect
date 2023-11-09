@@ -27,7 +27,7 @@ import {
 import { publicProvider } from 'wagmi/providers/public';
 import type { Chain } from 'wagmi';
 import {
-  RainbowKitProvider,
+  SwipeluxConnectProvider,
   ConnectButton,
   getDefaultWallets,
 } from '@swipelux/connect';
@@ -104,7 +104,7 @@ export default function App() {
       <body>
         {config && chains ? (
           <WagmiConfig config={config}>
-            <RainbowKitProvider chains={chains as Chain[]}>
+            <SwipeluxConnectProvider chains={chains as Chain[]}>
               <div
                 style={{
                   display: 'flex',
@@ -114,7 +114,7 @@ export default function App() {
               >
                 <ConnectButton />
               </div>
-            </RainbowKitProvider>
+            </SwipeluxConnectProvider>
             <Outlet />
           </WagmiConfig>
         ) : null}

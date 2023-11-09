@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import {
-  RainbowKitProvider,
+  SwipeluxConnectProvider,
   getDefaultWallets,
   connectorsForWallets,
   Locale,
@@ -69,16 +69,16 @@ const wagmiConfig = createConfig({
 });
 
 export function Providers(
-  { children, locale }: 
+  { children, locale }:
   { children: React.ReactNode, locale: Locale }
 ) {
   const [mounted, setMounted] = React.useState(false);
   React.useEffect(() => setMounted(true), []);
   return (
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains} appInfo={demoAppInfo} locale={locale}>
+      <SwipeluxConnectProvider chains={chains} appInfo={demoAppInfo} locale={locale}>
         {mounted && children}
-      </RainbowKitProvider>
+      </SwipeluxConnectProvider>
     </WagmiConfig>
   );
 }

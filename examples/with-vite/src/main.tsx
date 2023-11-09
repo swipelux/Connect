@@ -1,7 +1,7 @@
 import './polyfills';
 import './global.css';
 import '@swipelux/connect/styles.css';
-import { getDefaultWallets, RainbowKitProvider } from '@swipelux/connect';
+import { getDefaultWallets, SwipeluxConnectProvider } from '@swipelux/connect';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { mainnet, polygon, optimism, arbitrum, base, zora } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
@@ -29,9 +29,9 @@ const wagmiConfig = createConfig({
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains}>
+      <SwipeluxConnectProvider chains={chains}>
         <App />
-      </RainbowKitProvider>
+      </SwipeluxConnectProvider>
     </WagmiConfig>
   </React.StrictMode>
 );
