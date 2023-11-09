@@ -14,7 +14,7 @@ export const SwipeluxWidgetProvider = ({ children, widgetSettings}: PropsWithChi
     loadExternalScript('https://app.dev.swipelux.com/sdk.js', () => {
       setSwipeluxWidgetReady(true);
     })
-  }, []);
+  }, [setSwipeluxWidgetReady]);
 
 
   return (
@@ -34,7 +34,7 @@ export function useSwipeluxWidget() {
 
 
 function loadExternalScript(src: string, onLoad: () => void) {
-  if (document && document.body && window) {
+  if (document?.body && window) {
     const script = document.createElement('script');
     script.src = src;
     script.async = true;

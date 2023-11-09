@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import { useTheme } from "../RainbowKitProvider/RainbowKitProvider";
 import { useSwipeluxWidget } from "../RainbowKitProvider/SwipeluxWidgetContext";
 import { Box } from "../Box/Box";
 
@@ -7,8 +6,6 @@ export function SwipeluxWidget({ address }: { address?: string }) {
     const widgetRef = useRef(null);
     const widgetInit = useRef(false);
     const { ready, widgetSettings } = useSwipeluxWidget();
-    const theme = useTheme();
-
 
     useEffect(() => {
         if (ready && widgetRef.current && window && !widgetInit.current) {
@@ -30,7 +27,7 @@ export function SwipeluxWidget({ address }: { address?: string }) {
             widget.init();
             widgetInit.current = true;
         }
-    }, [address]);
+    }, [address, widgetSettings, ready]);
 
     return (
         <Box ref={widgetRef} />

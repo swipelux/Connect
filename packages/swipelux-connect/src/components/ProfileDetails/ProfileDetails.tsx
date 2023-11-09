@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useAccount, useBalance, useEnsAvatar, useEnsName } from 'wagmi';
 import { isMobile } from '../../utils/isMobile';
 import { Box } from '../Box/Box';
@@ -9,8 +9,6 @@ import { formatENS } from '../ConnectButton/formatENS';
 import { CopiedIcon } from '../Icons/Copied';
 import { CopyIcon } from '../Icons/Copy';
 import { DisconnectIcon } from '../Icons/Disconnect';
-import { I18nContext } from '../RainbowKitProvider/I18nContext';
-import { ShowRecentTransactionsContext } from '../RainbowKitProvider/ShowRecentTransactionsContext';
 import { Text } from '../Text/Text';
 import { ProfileDetailsAction } from './ProfileDetailsAction';
 import {SwipeluxWidget} from "../SwipeluxWidget/SwipeluxWidget";
@@ -27,16 +25,11 @@ interface ProfileDetailsProps {
 export function ProfileDetails({
   address,
   balanceData,
-  ensAvatar,
   ensName,
   onClose,
   onDisconnect,
 }: ProfileDetailsProps) {
-  const showRecentTransactions = useContext(ShowRecentTransactionsContext);
   const [copiedAddress, setCopiedAddress] = useState(false);
-
-  const i18n = useContext(I18nContext);
-
   const copyAddressAction = useCallback(() => {
     if (address) {
       navigator.clipboard.writeText(address);
