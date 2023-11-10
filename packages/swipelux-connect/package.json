@@ -1,6 +1,6 @@
 {
   "name": "@swipelux/connect",
-  "version": "1.0.0-pre-release",
+  "version": "1.0.0",
   "description": "The best way to connect a wallet",
   "files": [
     "dist",
