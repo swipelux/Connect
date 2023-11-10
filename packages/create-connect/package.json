@@ -1,7 +1,7 @@
 {
   "name": "@swipelux/create-connect",
   "description": "Scaffold a new Connect project",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "files": [
     "dist",
     "templates"
