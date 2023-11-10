@@ -4,7 +4,7 @@
 ![](https://github.com/swipelux/Connect/actions/workflows/codeql-analysis.yml/badge.svg)
 ![](https://github.com/swipelux/Connect/actions/workflows/release.yml/badge.svg)
 
-**The best way to connect a wallet **
+**The best way to connect a wallet**
 
 Connect is a fork of the RainbowKit project. Connect is a [React](https://reactjs.org/) library that makes it easy to add wallet connection to your dapp.
 
